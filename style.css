@@ -1,70 +1,80 @@
-*{
-	padding: 0;
-	margin: 0; 
-}
-li{
-	list-style: none;
-	display: flex;
-}
-a{
-	text-decoration: none;
-}
-header{
-	background: aqua;
-	padding: 50px;
-}
-.header-container{
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-}
-.header-container a{
-	color: #fff;
-	font-size: 20px;
-	margin-right: 60px;
-	padding: 15px;
-}
-.header-container a:hover{
-	background: red;
+header {
+  width: 50%;
+  height: 30px;
+  background: green;
+
 }
 
-ul{
-	display: flex;
+.header__menu {
+  padding: 2px;
+  font-size: 25px;
 }
 
-nav{
-	margin-top: 20px;
+.burger div {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #ffffff;
+  margin: 6px;
+
 }
 
-@media screen and( max-width: 420px) {
-    .header-container{
-    	width: 100%;
-    	display: flex;
-    	justify-content: space-around;
-    }
-    .main-menu{
-    	display: none;
-    }
-    .main-menu li{
-    	width: 100%;
-    	display: block;
-    	font-size: 12px;
-    }
-    .main-menu a{
-    	display: block;
-    	padding: 8px;
-    }
-    .toggle-button{
-    	text-align: center;
-    	display: block;
-    	cursor: pointer;
-    	color: black;	
-    }
-    .toggle-button:after{
-    	content: attr(data-open);
-    	display: block;
+.container {
+  display: flex;
+  justify-content: space-between;
+
 }
-    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
-    	display: block; 
-    }
+
+@media (min-width:1025px) {
+  .burger {
+    display: none;
+  }
+
+  .header__menu {
+    font-size: 23px;
+  }
+}
+
+@media (min-width:961px) and (max-width:1024px) {
+  .burger {
+    display: none;
+  }
+
+  .header__menu {
+    font-size: 20px;
+  }
+}
+
+@media (min-width:641px) and (max-width:960px) {
+  .burger {
+    display: none;
+  }
+
+  .header__menu {
+    font-size: 17px;
+    padding: 5px;
+  }
+}
+
+@media (min-width:481px) and (max-width:640px) {
+  .burger {
+    display: none;
+  }
+
+  .header__menu {
+    font-size: 15px;
+    padding: 6px;
+  }
+}
+
+@media (min-width:320px) and (max-width:480px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (max-width:320px) {
+  .header__menu {
+    display: none;
+  }
+}
